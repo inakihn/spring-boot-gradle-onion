@@ -1,0 +1,13 @@
+# Default ignored files
+/copilot/chatSessions
+
+# Configured adapting https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+# Ignore specific files from plugins
+/*
+
+# Unignored folders
+!/codeStyles/
+!/inspectionProfiles/
+
+# Unignored files
+!/icon.svg
