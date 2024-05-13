@@ -1,0 +1,23 @@
+version: '3.9'
+name: inakihn-onion
+services:
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgresql
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - inakihn-network
+volumes:
+  db:
+    driver: local
+networks:
+  inakihn-network:
+    name: "inakihn-network"
+    driver: bridge
