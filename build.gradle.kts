@@ -1,6 +1,5 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.2.3"
 	id("io.spring.dependency-management") version "1.1.4"
 }
 
@@ -15,16 +14,14 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-web")
+subprojects {
+	repositories {
+		mavenCentral()
+	}
 
-	runtimeOnly("org.postgresql:postgresql")
-
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.boot:spring-boot-testcontainers")
-	testImplementation("org.testcontainers:junit-jupiter")
-	testImplementation("org.testcontainers:postgresql")
+	apply {
+		plugin("io.spring.dependency-management")
+	}
 }
 
 tasks.withType<Test> {
