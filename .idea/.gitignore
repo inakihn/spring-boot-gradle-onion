@@ -1,10 +1,11 @@
 # Default ignored files
 /*
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions
 
 # Unignored folders
 !/codeStyles/
 !/inspectionProfiles/
 
 # Unignored files
-!/icon.svg# GitHub Copilot persisted chat sessions
-/copilot/chatSessions
+!/icon.svg
